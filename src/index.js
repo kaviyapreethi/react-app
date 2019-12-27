@@ -21,7 +21,9 @@ sayHello();
 
 const person = {
   name: "Kaviya", //property
-  walk() {}, //method
+  walk() {
+    console.log(this);
+  }, //method
   talk() {} //method
 };
 console.log(person.name);
@@ -29,3 +31,9 @@ console.log(person.talk());
 console.log((person.name = "Kavi"));
 const targetMember = "name";
 console.log((person[targetMember.value] = "Kavs"));
+
+person.walk();
+const walk = person.walk;
+console.log(walk);
+
+walk(); //
