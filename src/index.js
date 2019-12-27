@@ -18,3 +18,14 @@ function sayHello() {
 sayHello();
 //So in ES6 we prefer ‘let’ to avoid access outside the block.
 //And prefer ‘const’ to avoid re-assigning the value.
+
+const person = {
+  name: "Kaviya", //property
+  walk() {}, //method
+  talk() {} //method
+};
+console.log(person.name);
+console.log(person.talk());
+console.log((person.name = "Kavi"));
+const targetMember = "name";
+console.log((person[targetMember.value] = "Kavs"));
