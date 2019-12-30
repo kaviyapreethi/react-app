@@ -122,3 +122,17 @@ employee.project();
 
 const employee1 = new Employee("Cathy");
 employee1.project();
+
+//inheritance
+class QA extends Employee {
+  constructor(empName, role) {
+    super(empName);
+    this.role = role;
+  }
+  bugs() {
+    console.log(`Hi ${this.empName} you have few bugs. Role is ${this.role}`);
+  }
+}
+
+const qa = new QA("Kaviya", "developer"); //it is enough to assign values to child class
+qa.bugs();
