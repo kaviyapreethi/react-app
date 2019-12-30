@@ -36,4 +36,7 @@ person.walk();
 const walk = person.walk;
 console.log(walk);
 
-walk(); //
+walk(); //reference to the global object. Which is the window object. Since strict mode is enabled the output is undefinrd.
+
+const walk_enable = person.walk.bind(person); // person.walk is an object. bind is a member, used to bind a function to an object
+walk_enable(); //now bind has fixed the strict mode problem
