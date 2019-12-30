@@ -72,3 +72,7 @@ const student = {
   }
 };
 student.exam();
+
+const colors = ["red", "white", "blue", "pink", "yellow"];
+const items = colors.map(color => `<li>${color}</li>`); //array.map method
+console.log(items);
