@@ -36,7 +36,29 @@ person.walk();
 const walk = person.walk;
 console.log(walk);
 
-walk(); //reference to the global object. Which is the window object. Since strict mode is enabled the output is undefinrd.
+walk(); //reference to the global object. Which is the window object. Since strict mode is enabled the output is undefined.
 
 const walk_enable = person.walk.bind(person); // person.walk is an object. bind is a member, used to bind a function to an object
 walk_enable(); //now bind has fixed the strict mode problem
+
+const square = function(number) {
+  return number * number;
+};
+console.log(square(5));
+
+const arrow_square = number => number * number; // precise the code using arrow.
+console.log(arrow_square(10));
+
+const jobs = [
+  { id: 1, isActive: true },
+  { id: 2, isActive: true },
+  { id: 3, isActive: false }
+];
+
+const activeJobs = jobs.filter(function(job) {
+  return job.isActive;
+});
+console.log(activeJobs);
+
+const arrow_activeJobs = jobs.filter(job => job.isActive); // using arrow function
+console.log(arrow_activeJobs);
