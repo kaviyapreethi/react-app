@@ -76,3 +76,19 @@ student.exam();
 const colors = ["red", "white", "blue", "pink", "yellow"];
 const items = colors.map(color => `<li>${color}</li>`); //array.map method
 console.log(items);
+
+//destructuring
+const address = {
+  street: "",
+  city: "",
+  country: ""
+};
+
+//const street = address.street;
+//const city = address.city;
+//const country = address.country;
+
+const { street, city, country } = address; // instead of '.' notation we follow destructuring
+const { street: st } = address; // st is the alias name to call the constant street
+
+console.log(address);
