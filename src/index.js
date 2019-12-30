@@ -103,3 +103,22 @@ console.log(clone);
 
 const combined = { ...first, ...second, location: "chennai" };
 console.log(combined);
+
+//Class if we have 2 different objects with same method name, then things get complicated. So we create a blueprint of it to reduce the multiple copies.
+
+class Employee {
+  constructor(empName) {
+    this.empName = empName;
+  }
+  project() {
+    console.log(
+      `Hi ${this.empName} This Project is called from Employee class`
+    );
+  }
+}
+
+const employee = new Employee("Crispin");
+employee.project();
+
+const employee1 = new Employee("Cathy");
+employee1.project();
