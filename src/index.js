@@ -62,3 +62,13 @@ console.log(activeJobs);
 
 const arrow_activeJobs = jobs.filter(job => job.isActive); // using arrow function
 console.log(arrow_activeJobs);
+
+const student = {
+  exam() {
+    setTimeout(() => {
+      //in callbak functions strict mode can't override. this returns the reference to the window object. so use arrow, thus this returns the reference to the student object.
+      console.log("this", this);
+    }, 1000);
+  }
+};
+student.exam();
