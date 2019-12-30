@@ -1,8 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { root } from "postcss";
-import { QA } from "./qa";
+import QA, { promote } from "./qa";
 import { from } from "rxjs";
+
+//Default  -> import ... from '';
+//Named -> import {...} from '';
 
 const element = <h1>Hello World</h1>;
 ReactDOM.render(element, document.getElementById("root"));
@@ -109,3 +112,4 @@ console.log(combined);
 const qa = new QA("Kaviya", "developer"); //it is enough to assign values to child class
 qa.project();
 qa.bugs();
+promote();

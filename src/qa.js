@@ -1,7 +1,11 @@
 import { Employee } from "./employee";
 
+export function promote() {
+  console.log("Named Export");
+}
+
 //inheritance
-export class QA extends Employee {
+export default class QA extends Employee {
   constructor(empName, role) {
     super(empName);
     this.role = role;
