@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { root } from "postcss";
 
 const element = <h1>Hello World</h1>;
 ReactDOM.render(element, document.getElementById("root"));
@@ -77,7 +78,7 @@ const colors = ["red", "white", "blue", "pink", "yellow"];
 const items = colors.map(color => `<li>${color}</li>`); //array.map method
 console.log(items);
 
-//destructuring
+//Object destructuring
 const address = {
   street: "",
   city: "",
@@ -92,3 +93,13 @@ const { street, city, country } = address; // instead of '.' notation we follow 
 const { street: st } = address; // st is the alias name to call the constant street
 
 console.log(address);
+
+const first = { name: "Kaviya" }; //similarly we can follow arrays 'const first=[1,2,3];'
+const second = { designation: "software-developer" };
+
+const clone = { ...first }; // ...is spread operator
+console.log(first);
+console.log(clone);
+
+const combined = { ...first, ...second, location: "chennai" };
+console.log(combined);
